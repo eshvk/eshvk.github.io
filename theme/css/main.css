@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "sorts-mill-goudy";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/GoudyStM-webfont.eot?#iefix") format("embedded-opentype"), url("../font/GoudyStM-webfont.woff2") format("woff2"), url("../font/GoudyStM-webfont.woff") format("woff"), url("../font/GoudyStM-webfont.ttf") format("truetype"), url("../font/GoudyStM-webfont.svg#sorts-mill-goudy") format("svg");
+}
+@font-face {
+  font-family: "sorts-mill-goudy-italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/GoudyStM-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/GoudyStM-Italic-webfont.woff2") format("woff2"), url("../font/GoudyStM-Italic-webfont.woff") format("woff"), url("../font/GoudyStM-Italic-webfont.ttf") format("truetype"), url("../font/GoudyStM-Italic-webfont.svg#sorts-mill-goudy-italic") format("svg");
+}
+@font-face {
+  font-family: "museo-sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/MuseoSans.eot?#iefix") format("embedded-opentype"), url("../font/MuseoSans.woff2") format("woff2"), url("../font/MuseoSans.woff") format("woff"), url("../font/MuseoSans.ttf") format("truetype"), url("../font/MuseoSans.svg#museo-sans") format("svg");
+}
+@font-face {
+  font-family: "sofia-pro-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/SofiaProLight-webfont.eot?#iefix") format("embedded-opentype"), url("../font/SofiaProLight-webfont.woff2") format("woff2"), url("../font/SofiaProLight-webfont.woff") format("woff"), url("../font/SofiaProLight-webfont.ttf") format("truetype"), url("../font/SofiaProLight-webfont.svg#sofia-pro-light") format("svg");
+}
+@font-face {
+  font-family: "bookletter";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/goudy_bookletter_1911-webfont.eot?#iefix") format("embedded-opentype"), url("../font/goudy_bookletter_1911-webfont.woff2") format("woff2"), url("../font/goudy_bookletter_1911-webfont.woff") format("woff"), url("../font/goudy_bookletter_1911-webfont.ttf") format("truetype"), url("../font/goudy_bookletter_1911-webfont.svg#bookletter") format("svg");
+}
+@font-face {
+  font-family: "governor";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/governor-webfont.eot?#iefix") format("embedded-opentype"), url("../font/governor-webfont.woff2") format("woff2"), url("../font/governor-webfont.woff") format("woff"), url("../font/governor-webfont.ttf") format("truetype"), url("../font/governor-webfont.svg#governor") format("svg");
+}
+@font-face {
+  font-family: "nevis";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/nevis-webfont.eot?#iefix") format("embedded-opentype"), url("../font/nevis-webfont.woff2") format("woff2"), url("../font/nevis-webfont.woff") format("woff"), url("../font/nevis-webfont.ttf") format("truetype"), url("../font/nevis-webfont.svg#nevis") format("svg");
+}
+@font-face {
+  font-family: "calluna-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/Calluna-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Calluna-Regular-webfont.woff2") format("woff2"), url("../font/Calluna-Regular-webfont.woff") format("woff"), url("../font/Calluna-Regular-webfont.ttf") format("truetype"), url("../font/Calluna-Regular-webfont.svg#calluna-regular") format("svg");
+}
+/* Colors */
+/* Typography */
+/* Layout */
+/* Width of the content area */
+/* Space between the date and the post */
+/* TODO Remove date */
+/* Weight of the line at the very top of the page */
+@media -sass-debug-info{filename{}line{font-family:\000034}}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "sorts-mill-goudy";
+  font-size: 1.1em;
+  border-top: 8px solid #333;
+  color: #333;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000313}}
+em {
+  font-style: normal;
+  font-family: "sorts-mill-goudy-italic";
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000318}}
+h2 {
+  margin-top: 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000325}}
+.wrap {
+  margin: 0 auto;
+  width: 45%;
+  /* blog footer */
+  /* The greater than symbol tells css that you want only the footer to be
+   * affected and not internals 
+   */
+}
+@media -sass-debug-info{filename{}line{font-family:\0000332}}
+.wrap > footer {
+  margin-top: 2em;
+  padding: 2em 0;
+  border-top: 1px solid #dfdfdf;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* Index */
+@media -sass-debug-info{filename{}line{font-family:\0000342}}
+.index {
+  text-align: center;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000344}}
+.index ul {
+  list-style-type: none;
+}
+
+/* The main blog header */
+@media -sass-debug-info{filename{}line{font-family:\0000351}}
+header {
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf;
+  /* // a */
+}
+@media -sass-debug-info{filename{}line{font-family:\0000353}}
+header .title {
+  font-family: "nevis";
+  font-size: 2.3em;
+  text-transform: uppercase;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000358}}
+header .subtitle {
+  font-family: "calluna-regular";
+  font-size: 1.4em;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000363}}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000366}}
+header a:hover, header a:active {
+  color: #258fb8;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000374}}
+a {
+  color: #258fb8;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000377}}
+a:hover {
+  color: #333;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000382}}
+blockquote {
+  font-family: "sorts-mill-goudy-italic";
+  font-size: 1em;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000387}}
+article {
+  padding: 0;
+  font-size: 1.1em;
+  line-height: 1.7em;
+  text-align: justify;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000392}}
+article header {
+  margin: 0 0 3em 0;
+  padding: 0;
+  border: 0px;
+  text-align: center;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000397}}
+article header h1 {
+  font-size: 1.6em;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.3em;
+  text-align: center;
+}

@@ -1,0 +1,105 @@
+@import "bourbon/bourbon";
+@import "typography";
+@import "variables";
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $body-font;
+    font-size: $body-font-size;
+    border-top: $top-line-weight solid $black;
+    color: $black;
+}
+
+em {
+    font-style: normal;
+    font-family: $body-font-italic;
+    }
+
+h2 {
+    margin-top: $subheading-top-spacing;
+    font-size: $subheading-font-size;
+    font-weight: $subheading-font-weight;
+    font-style: $subheading-font-style;
+}
+
+.wrap {
+    margin: 0 auto;
+    width: $content-width;
+    /* blog footer */
+    /* The greater than symbol tells css that you want only the footer to be
+     * affected and not internals 
+     */
+    & > footer {
+        margin-top: 2em;
+        padding: 2em 0;
+        border-top: 1px solid $light-gray;
+        text-align: center;
+        font-size: 0.8em;
+        }
+}
+
+/* Index */
+.index {
+    text-align: center;
+    ul {
+        list-style-type: none;
+    }
+}
+
+/* The main blog header */
+
+header {
+    text-align: center;
+    .title {
+        font-family: $blog-title-font;
+        font-size: $blog-title-font-size;
+        text-transform: $blog-title-text-transform;
+        }
+    .subtitle {
+        font-family: $blog-subtitle-font;
+        font-size: $blog-subtitle-font-size;
+        }
+    border-bottom: 1px solid $light-gray;
+    a {
+        color: $black;
+        text-decoration: none;
+        &:hover,
+        &:active {
+            color: $main-color;
+        }
+    }/* // a */
+    
+}
+
+a {
+    color: $main-color;
+    text-decoration: none;
+    &:hover {
+        color: $black;
+    }
+}
+
+blockquote {
+    font-family: $blockquote-font-family;
+    font-size: $blockquote-font-size;
+}
+
+article {
+    padding: 0;
+	font-size: $post-font-size;
+	line-height: $post-font-line-height;
+	text-align: $post-align;
+	header {
+		margin: 0 0 $post-content-top-space 0;
+		padding: 0;
+		border: 0px;
+		text-align: center;
+		h1 {
+			font-size: $post-title-font-size;		
+			font-weight: $post-title-font-weight;
+			font-style: $post-title-font-style;
+			line-height: $post-title-line-height;
+			text-align: $post-title-align;
+			}
+		}
+}

@@ -1,0 +1,41 @@
+Around a year back, I was working with Mozilla's [metrics] [metrics-team] team 
+trying to extract insights from [user-feedback][input]. I am (slowly) compiling
+my notes from that time. This is the first of a few posts on one of the
+subproblems I was attacking: Inferring the language that the feedback was
+written in. 
+
+## Introduction
+
+One way to model the problem of classifying languages is to assume that there
+is an unknown engine which produces a stream of feedbacks using the following
+process: It first flips a $L$ sided die to pick a language, it then writes the 
+feedback based on a probabilistic model for that language. Our problem is to 
+make some assumptions as to what sort of structure the different probabilistic 
+models might have, (For example, Gaussian, binomial or multinomial models for
+the language) and then _infer_ the parameters of the models from training data. 
+
+Once this inference is done, _deciding_ the language that a new feedback coming
+in might belong to is a mere matter of figuring out which of our
+reconstructions of the engine's models fits the current feedback best. The
+whole process is therefore split cleanly split into Inference and Decision stages 
+(in contrast to how [discriminative classifiers][discriminative_wiki] work).
+
+### Inference and Decision
+
+Intuitively, we can expectG that a reliable estimate for the probability of a 
+feedback being english to be the fraction of english feedbacks in the training
+set. On the other hand, the language model is a whole another ball game. 
+
+
+#### A simple language model
+
+One approach is to imagine 
+that the language model is a long vector where each element represents a unique
+word in the vocabulary. The engine then _writes_ feedback by walking along the
+vector and flipping coins to decide whether or not to decide whether that
+particular word will be part of the feedback. Our job then is to figure out the
+bias of the coins that were used. Again, intuitively, one would expect, say the
+probability of "dog", in the english language to be reliably estimated by the
+number of english documents containing the term "dog". 
+
+{% flickr_set 72157634916054245 16 %}

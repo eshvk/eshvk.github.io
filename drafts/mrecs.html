@@ -1,0 +1,431 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>mrecs</title></head><body><p>Recommendations : A Survey</p>
+<p>Question: How do I get you stuff you may like? </p>
+<h2 id="collaborative-filtering">Collaborative Filtering</h2>
+<p>The central idea is to "Filter" out the things that a user will like based on his/her collaborative liking of other things that other users like. In other words, two users have the same opinion on a certain topic implies that their opinion on another topic might be identical.</p>
+<p>Another core idea mentioned in MMDS is the long tail. In a more information theoretic fashion, what is most interesting. Not necessarily the most popular. </p>
+<h3 id="issues">Issues</h3>
+<h4 id="similarity-computation">Similarity Computation</h4>
+<ul>
+<li>How do you model similar users? This is important because you have sparsity (missing values), incredibly popular items (can skew data) ? </li>
+</ul>
+<h5 id="similarity-metrics">Similarity Metrics</h5>
+<ul>
+<li>The metric function used to decide on similarity has unintentional effects. Jaccard Similarity for example works on the basis of looking at how much overlap there is between two sets. This seems intuitive enough. You can translate this into a metric distance by doing a 1- Sim(x,y). However, this is not perfect: suppose you have a user Alice and another user Bob. Bob loves Neil Gaiman novels; he has read two books. Good Omens and Coraline. Alice hated Good Omens. Their Jaccard distance would be 0.5. However, consider Betsy who loved Good Omens, Coraline and also has highly rated ten Discworld novels. The Jaccard distance between Bob and Betsy is 0.8. This is odd for two reasons:</li>
+</ul>
+<p>a) Arguably Betsy is a closer match to Bob because she and he like the things that they have commonly rated. This information is lost. </p>
+<p>b) Another thing that appears interesting is the situation of sparsity. You have more information in the Betsy, Bob case; not really in the Alice, Bob case which messes up the distance. </p>
+<ul>
+<li>
+<p>So how do we fix this? One approach would be to treat "hatred" or "low" ratings as not even rating the book. So Alice and Bob would have a J-Distance of 1 while J(Bob,Betsy) = 0.8. So they are closer than Alice and Bob. </p>
+</li>
+<li>
+<p>We could use a different metric distance; say cosine distance which is the angle between the two vectors. </p>
+</li>
+</ul>
+<p>TODO: MMDS states that the use for cosine distance is in spaces that have a concept of dimension like Euclidean space. Furthermore, they also make sense in a spaces that are similar to Euclidean spaces: binary dimensions, integer ratings. Why? Why does it make sense in these specific situations? </p>
+<p>Nonwithstanding above issue, an intriguing point is to understand how to merge dimensions with differing scales together. Say you have information that Alice loves Terry Pratchett books which have Vimes in them and also has a 2 star rating for Good Omens. How do you merge this information with Bob who also loves (binary 1-0) Vimes books and has a 5 star rating for Good Omens and a 4 star rating for Coraline. Cosine similarity gives you a naive way of combining these ratings. However, this brings into the problem of side-effects. Maybe, Bob is an excitable character who rates every book pretty damn high. Maybe, all the users have a certain average rating that they give books. Maybe Good Omens is one of those books that gets high ratings for everyone. So in essence the rating can be decomposed into several factors. The global rating, the local biases inherent to that user. Scaling from the cosine similarity sense is equivalent to normalization or removing these biases to identify the core issues. </p>
+<p>TODO: I need to drill this further. For example, is it possible to build a regression model for all the biases as a feature vector. I see this as a way of me not having to deal with the data, but is there any other advantage? What are possible disadvantages of this approach? </p>
+<p>TODO: How do you define a concept of similarity for things like genre information? Do you define a similarity between related genres? How do you even do such a thing? For example, how do you assert that crime and mystery are closer than crime and comedy? Is there a principled way of doing this? </p>
+<p>Note that there is a way of getting around this in the case when we allow multiple labels. If something could be crime and comedy, you could essentially have a boolean membership for crime, comedy and so on. Yet, this feels grossly unsatisfying from the perspective of combining this and the previous problem. </p>
+<p>TODO: Look at the problem from a classification perspective. How do people do classification when features are categorical?  </p>
+<h6 id="more-insights-on-metrics">More insights on metrics</h6>
+<ul>
+<li>
+<p>Inner Product. The inner product is high when both of the individual values in the vectors are sort of similar. It is however unbounded. Furthermore, the value is highly dependent on where the vectors lie in space. </p>
+</li>
+<li>
+<p>Cosine Similarity. This is inner product divided by product of L2 norms of the two vectors. This is bounded between -1 and 1. </p>
+</li>
+<li>
+<p>Pearson's correlation coefficient. This is invariant to shifts. The way to do that is to subtract each vector from the mean of that vector before taking the inner product and normalizing it. </p>
+</li>
+<li>
+<p>Adjusting cosine similarity. One problem with cosine similarity from the user is the fact that different users may have different scales of rating, we can adjust for this by subtracting from every user, the average rating of that user.</p>
+</li>
+</ul>
+<p>On an aside, Ordinary Least Squares. In ordinary least squares, we try to minimize the error so as to find the best estimate for the parameters of a line (slope, intercept) that fit a given dataset. The slope equation is in essence the inner product of the x and y vectors (mean shifted), normalized only on the x side. </p>
+<h4 id="how-do-you-decide-how-to-exploit-the-utility-matrix">How do you decide how to exploit the Utility matrix?</h4>
+<p>This is a subtle issue: The Utility matrix is the User-Item matrix of things that Users bought or liked or whatever metric we are using. We could use this to find for every users similar users and then go ahead and find items that they have liked that the original user has not. </p>
+<h5 id="user-vs-item">User vs Item</h5>
+<p>Reading about CF indicates that there are two approaches in which this problem can be tackled. One is trying to find like minded users to a given user and then use their new likes as potential likes for this user. Another is to find similar items to a given item (similar by user liking this item also liking the other item). Then recommending such similar items to a user. Now, most papers prefer this approach and claim it is more scalable. I am not sure why? The reason from what I understand is as follows:</p>
+<ul>
+<li>
+<p>More users than items.</p>
+</li>
+<li>
+<p>Less information per user to identify other users similar to a given user. More user per item conversely. A weaker argument, I know. MMDS expands on this. They say that it is mainly because it is easier to find similar items or rather items that belong to the same genre but the same is not true for two users: just because you and I like climbing doesn't mean we are similar. </p>
+</li>
+</ul>
+<h3 id="general-approaches">General Approaches</h3>
+<h4 id="search">Search</h4>
+<p>For a given user, the problem then boils down into finding items that they would possibly like. In Linear Algebraic terms, there are two ways of doing this. We could construct vectors for users and items in the same space, then find the closest items that the user is similar to and then filter out the items the user has already seen.</p>
+<p>One way of doing this practically is LSH that helps figure out which bucket to search within. Another approach is to cluster items into larger groups, then use that to do the search efficiently. I suppose things like genre information could help in this clustering process. </p>
+<h4 id="matrix-decomposition">Matrix Decomposition</h4>
+<p>Considering the entire problem as filling in values in a missing value matrix. This is what spotify does. Now, you would have to do UV decomposition of the utility matrix inorder to find the U and V that make up the matrix. The way you would do this is to do gradient descent. Initialize U and V with some arbitrarily values and optimize for RMSE. Now, there might be several local minima. There could be overfitting (regularization to avoid that). Furthermore, the size of the matrix iteself could be so large that one can't do gradient descent using all the values. </p>
+<p>Note that this is in some sense posing the problem as a classification problem, except that you are both finding the feature values and the weight values simultaneously whilst fixing only the number of dimensions. </p>
+<p>QUESTION: Why do Matrix factorization as opposed to LSH? Or nearest neighbor searches? </p>
+<h2 id="content-based-approaches">Content based approaches</h2>
+<p>This is treating the Utility matrix as a rating matrix and constructing item feature vectors and then computing user preference vectors by treating this as a classification problem. </p>
+<h2 id="ensemble-clustering">Ensemble Clustering</h2>
+<p>Merging a bunch of weak recommendation techniques together to build a more sophisticated model. </p>
+<h2 id="todo">TODO</h2>
+<p>Read more here: http://www.slideshare.net/liorrokach/recommender-systems-13809014</p>
+<p>Collect all the references mentioned in page 339 of MMDS and use them to learn more. </p>
+<p>IDEAS</p>
+<p>Time, Space and Denver</p>
+<p>Music Recs: Survey, Review : Apply everything to book recommendations? Why is there no implicit dataset for libraries? Also can I extend the weight loss thingy to do regression and smoothing ? </p>
+<p>Pandora's Music Genome Project:</p>
+<ol>
+<li>http://www.thestreet.com/story/12059828/1/how-pandoras-music-genome-could-fail-against-the-likes-of-apple.html</li>
+</ol>
+<p>A. Who is Rocco Pendola? </p>
+<p>B. </p>
+<ol>
+<li>http://musically.com/2013/11/26/interview-moby-spotify-bittorrent/</li>
+</ol>
+<p>"When I was first shown Pandora and those early algorithms, I was pretty impressed by it. Generally I trust people, but with some of these algorithms it is pretty disconcerting as they are making recommendations that are surprisingly relevant. I read a lot of books on Kindle, but the Kindle recommendation algorithm is so damn ass-backwards. For example, if you read a book by Lee Childs the Kindle algorithm recommends a book by Lee Childs.</p>
+<p>Some music algorithms are surprisingly accurate and relevant, but at the end of the day what they don’t have is the arbitrary and surprise element that humans have. If I am listening to my favourite college radio station, the DJ might play a Black Flag song followed by a Bon Iver song followed by a Frank Sinatra song followed by some obscure minimalist techno.</p>
+<p>The fantastic arbitrary aspect of it is the one thing that none of the streaming algorithms can do. As much as I love Hank Williams, sometimes it’s really nice to have a Hank Williams song followed by a Pantera song."</p>
+<p>I think this is not about having an arbitrary recommendation but having whimsy incorporated into it. Whimsy that is a more sophisticated model. </p>
+<p>3."A Matrix Factorization Algorithm for Music Recommendation using
+Implicit User Feedback" </p>
+<p>http://mpacula.com/publications/lastfm.pdf</p>
+<p>This is an interesting paper. So the crux of the idea here is: How do you do CF with only implicit ratings? Prior to that he brings up a few issues. One, how does CF recommendations work currently. SGD is one approach used to obtain the latent feature vectors. Now, how does one work in the setting where one only has implicit ratings. Apparently, one approach is to convert the implicit ratings into an explicit rating. With a confidence interval for the fact that we are not certain that this is indeed the user's rating. For some reason that is not clear to me, this approach makes the CF matrix dense preventing SGD from being worked. So they develop an alternate approach. Another interesting issue that I saw was how the distribution of implicit ratings looks like. It is a power distribution with most users having played a very few artists. I think (haven't read the paper that thoroughly) that this means that the amount of recommendations you can do with greater certainity are low. In essence, you have more samples for some supports of the distribution. Not, for others. </p>
+<ol>
+<li>"Deep content-based music recommendation"
+https://dl.dropboxusercontent.com/u/19706734/deep_content_based_music_recommendation.pdf</li>
+</ol>
+<p>Spotify Project:</p>
+<ol>
+<li>Understand the spotify infrastructure.</li>
+</ol>
+<p>a) understand tech stack</p>
+<p>b) understand dev/dep tools that spotify uses. </p>
+<p>TODO: Refer Eric Hoffert's email. </p>
+<ol>
+<li>Understand current machine learning stack.</li>
+</ol>
+<p>a) Refer original Erik Bernhardsson material. </p>
+<p>b) http://www.slideshare.net/erikbern/mlhadoop-nyc-predictive-analytics-2</p>
+<p>c) Read Erik's rejected paper. </p>
+<ol>
+<li>New project ideas: TV Recommendations</li>
+</ol>
+<p>a) Overarching high level ideas: </p>
+<p>Need to leverage CF + Content work + Human annotations. </p>
+<p>Questions: </p>
+<ol>
+<li>
+<p>How valid is the current human annotation data? </p>
+</li>
+<li>
+<p>Assuming it is not "that valid", what does that mean? </p>
+</li>
+</ol>
+<p>b) Leveraging current music CF framework. </p>
+<p>Is there a reliable way of extracting music metadata from a tv show? </p>
+<p>TODO: extract music fingerprint from video and match music fingerprint use the music CF. </p>
+<p>c) Other exploratory goals: </p>
+<ol>
+<li>
+<p>How does Youtube's video recommendation platform work? </p>
+</li>
+<li>
+<p>How does Bluefin Analytics do it? Do some research on Deb Roy's work. </p>
+</li>
+<li>
+<p>TODO: Ask Eric H if he can send you the presentation. </p>
+</li>
+</ol>
+<p>Trip to NYC:</p>
+<p>TODO </p>
+<ol>
+<li>
+<p>Do research on movers. Mel's material? Atlas Van Lines, National VAn Lines. DONE</p>
+</li>
+<li>
+<p>Ship all important documents safely to ATX, valuables. </p>
+</li>
+<li>
+<p>Cancel Koret center membership. </p>
+</li>
+<li>
+<p>Raise hell on Monday: Ping Gigi, Lisa, Eric/Erik reg. the mover thing. DONE</p>
+</li>
+<li>
+<p>Reject AAPL. DONE</p>
+</li>
+<li>
+<p>Set an appointment for Vangard. DONE</p>
+</li>
+<li>
+<p>Find out what stuff you left in ATX. What do you actually need?  POTENTIALLY 2 BOOKS. N/A</p>
+</li>
+<li>
+<p>Buy an external harddrive, some sort of backed up storage solution. Then, copy and send that to Austin too. Chuck it. </p>
+</li>
+<li>
+<p>Call Ajai and ask reg. interstate moving. DONE</p>
+</li>
+<li>
+<p>Reg. Naga, talk at NYC Spotify on automatic playlist recommendation. Email Eric, Erik and cjohnson@spotify.com</p>
+</li>
+</ol>
+<p>Bills:</p>
+<ol>
+<li>
+<p>Charge trip to Houston + trip from Austin to NYC. </p>
+</li>
+<li>
+<p>Charge shipping docs from CA -&gt; ATX -&gt; NYC</p>
+</li>
+<li>
+<p>Koret cancellation charges? none</p>
+</li>
+<li>
+<p>Deposit loss charges? hmmm</p>
+</li>
+<li>
+<p>Hotel charges</p>
+</li>
+<li>
+<p>$120 tips for movers </p>
+</li>
+</ol>
+<p>Living: </p>
+<ol>
+<li>
+<p>How do neighborhoods in NYC map to SF? E.g. Mel says I should live in the Upper West Side. Is that a valid assertion? Why does Chris live where he lives? </p>
+</li>
+<li>
+<p>How does travel work? What commuter pass thingmajigs do I need? </p>
+</li>
+<li>
+<p>How do you establish residency ASAP? </p>
+</li>
+<li></li>
+</ol>
+<p>Talking to the UT person on his research gave me a couple of ideas. </p>
+<ol>
+<li>
+<p>I know Spotify uses Facebook information for login details but I don't know much about whether the social graph itself is used to improve the Collaborative Filtering network. To be specific, consider that User - Song rating matrix can be considered as the adjacency matrix of a bipartite graph: No links between user nodes explicitly but links existing between Users and Songs. Now, if you have some social network information, you have User - User links. This in essence means that you can soup the Collaborative Filtering network by adding this information in a principled manner to get better recommendations. The paper (attached) shows how his research accomplished that. </p>
+</li>
+<li>
+<p>Another idea into one feature which again depends on how current implementations at Spotify work is </p>
+</li>
+</ol>
+<p>http://www.cs.utexas.edu/~inderjit/public_papers/app_recommendation_recsys13.pdf</p>
+<p>for the potential talk gave me some insights into one possible feature we could possibly think about (distinct from the video project). Specifically, shuffles. Right now, the way shuffling works in Spotify's playlists looks randomized. (I presume nothing more sophisticated than a fisher yates shuffle but I could be wrong.). However, what if you could actually </p>
+<p>Moving from SF</p>
+<ol>
+<li>
+<p>Pack Do this on Wednesday. Documents, except for Passport and Green Card, Jewelry. Photos, Yubikey, Clothes. Some gym clothes.  </p>
+</li>
+<li>
+<p>Get a hotel for Thursday night, Friday night, Sat, Sun and Monday</p>
+</li>
+<li>
+<p>Cancel Gym membership. DONE</p>
+</li>
+<li>
+<p>Call up Naga and find out how fedex moving worked. DONE</p>
+</li>
+<li>
+<p>Do fedex moving. </p>
+</li>
+<li>
+<p>Get laundry clothes DONE</p>
+</li>
+<li>
+<p>Collate list of all things, send it to the woman. NOT DONE</p>
+</li>
+<li>
+<p>Tell the lady about Chelsea place.  DONE</p>
+</li>
+<li>
+<p>Book a flight from SF</p>
+</li>
+<li>
+<p>Send bills to Enthought. DONE</p>
+</li>
+<li>
+<p>Reject enthought.  DONE</p>
+</li>
+<li>
+<p>Collect all documents, then print out the ACH form, add a voided check. </p>
+</li>
+</ol>
+<p>25 stanyan street</p>
+<p>fedex office print and ship center: 1967 market st, san francisco, ca 94103 415-252-0864</p>
+<ol>
+<li>Updating Financial Instruments: Can't update address at Fidelity without contacting SU. How to roll it over? (Have updated to Austin Vangard, American Express, SF Fire, UFCU)</li>
+</ol>
+<p>Stuff:</p>
+<p>14 pictures. </p>
+<p>Books</p>
+<p>Har disk</p>
+<p>Headphone</p>
+<p>Selphy printer
+shaver
+grinder
+iron
+mixer
+cooker
+slow cooker
+hair dryer
+suitcase with clothes
+clothes
+shoes
+stuff (ipod, etc)
+measuring scale
+3 lamps
+two pillows
+1 small table
+1 desk
+1 bed
+1 knife
+pyrex 4 large square, 1 small square, 1 smaller square, 2 small, 2 big rounds, 1 measuring cup
+roller
+climbing gear
+backpack
+measuring cups metal
+measuring spooons
+george foreman grill</p>
+<p>Bouncer Neville Li social interactions</p>
+<p>More Like This: Similar to an item. </p>
+<p>evergreen, trending we can get around this problem</p>
+<p>ranking of genres. </p>
+<p>http://research.google.com/pubs/pub36697.html</p>
+<p>http://research.google.com/pubs/MachinePerception.html</p>
+<p>http://research.google.com/pubs/pub41422.html</p>
+<p>http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/35651.pdf
+http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/37391.pdf</p>
+<p>http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41403.pdf</p>
+<p>http://labrosa.ee.columbia.edu/</p>
+<p>http://www.ee.columbia.edu/~dpwe/e4896/outline.html music signal processing</p>
+<p>http://www.ee.columbia.edu/~dpwe/muscontent/ music ml</p>
+<p>[mmds] </p>
+<p><a href="http://blog.echen.me/2011/10/24/winning-the-netflix-prize-a-summary/">echenrec</a></p>
+<p>[sukoshgoftar] ( A Survey of Collaborative Filtering Techniques (Refer cf_survey.pdf))</p></body></html>

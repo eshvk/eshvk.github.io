@@ -1,0 +1,97 @@
+First of, let us consider the simple case where all our feedback is from one 
+language and explore how we would conduct inference in this case. Let us 
+introduce some notation to rigorously derive the intuition developed 
+above:
+Let the probability that a word represented by $w\_{i} \in \\{0,1\\}$, is chosen 
+be $\beta\_{i}$ with the probabilities forming a vector 
+$\mathbf{\beta} = \[\beta\_{1}, \ldots, \beta\_{\mathcal{V}}\]$.
+A feedback then can be represented using a binary vector: 
+$\mathbf{w} = \[w\_{1},\ldots,w\_{\mathcal{V}}]$. Say we are looking at 
+all the training examples, $\mathcal{D}$ for one specific language, we find that 
+the probability is given to be: 
+
+$$
+\begin{aligned} 
+ \mathbb{P}(\mathbf{w}_1,\ldots,\mathbf{w}_{\mathcal{D}}) &= \prod_{d=1}^{\mathcal{D}} \mathbb{P}(\mathbf{w}_{d}\mid \mathbf{\beta}) \newline
+ &= \prod_{d=1}^{\mathcal{D}}\prod_{v=1}^{\mathcal{V}}\mathbb{P}(w_{d,v}\mid
+ \mathbf{\beta})\newline
+ &= \prod_{v=1}^{\mathcal{V}}\beta_{v}^{k_{v}}(1 - \beta_{v})^{(\mathcal{D} - k_{v})} \newline
+\end{aligned}
+$$
+
+where $k\_{v}$ is the number of feedbacks in $\mathcal{D}$ where the word,
+$w\_{v}$ appears. We can rewrite the expression in terms of the [log
+likelihood](log_likelihood), $\mathcal{L}(\mathbf{\beta};\mathcal{D})$ as 
+
+$$
+\begin{aligned}
+\mathcal{L}(\mathbf{\beta};\mathcal{D}) &= \sum_{v=1}^{\mathcal{V}}k_v\ln(\beta_{v} )+ \sum_{v=1}^{\mathcal{V}}(\mathcal{D} - k_{v})\ln(1 - \beta_{v}) \newline
+\end{aligned}
+$$
+
+
+Maximizing this expression w.r.t to the vector $\mathbf{\beta}$ gives us
+estimates for $\beta\_{v}$ as 
+
+$$
+\begin{equation*}
+\hat{\beta_{v}}= \frac{k_{v}}{\mathcal{D}}
+\end{equation*}
+$$
+
+
+
+Let us now consider the full blown case where the training set is filled with
+examples from $L$ different languages. We can represent this as $\mathcal{D} =
+\\{(\mathbf{w}\_{1}, \mathbf{c}\_{1}),\ldots,(\mathbf{w}\_{\mathcal{D}}, \mathbf{c}\_{\mathcal{D}})\\}$ where $\mathbf{c}\_{d}$ is an $L$ dimensional binary vector with a $1$ for a specific language and $0$ otherwise. Let the probability of selecting any language be $\pi\_{i}$ with the 
+probabilites forming a vector $\mathbf{\pi} = \[\pi\_{1},\ldots,\pi\_{L}\]$.
+$\mathbf{\beta}$ now represents a matrix of the probabilities for every word in
+every language. Let us now redevelop the math for the maximum likelihood estimators for this
+model:
+
+$$
+\begin{aligned}
+\mathbb{P}(\mathcal{D}\mid\mathcal{\beta}, \mathbf{\pi}) &= \prod_{d=1}^{\mathcal{D}}\mathbb{P}(\mathbf{c}_{d}\mid\pi)\prod_{v=1}^{\mathcal{V}}\mathbb{P}(w_{d,v}\mid \mathbf{\beta}_{\mathbf{c}_{d}})\newline
+&=
+\prod_{d=1}^{\mathcal{D}}\prod_{l=1}^{L}\pi_l^{\mathcal{c}_{d}^{l}}\prod_{l=1}^{L}\biggr(\prod_{v=1}^{\mathcal{V_{l}}} \beta_{l,v}^{w_{d,v}}(1 - \beta_{l,v})^{(w_{d,v})}\biggr)^{\mathcal{c}_{d}^{l}}\newline
+\mathcal{L}(\mathbf{\beta}, \mathbf{\pi};\mathcal{D}) &= \sum_{d=1}^{\mathcal{D}}\sum_{l=1}^{L}\mathcal{c}_{d}^{l}\ln\pi_l + \sum_{l=1}^{L}\biggr(\sum_{v=1}^{\mathcal{V_{l}}}  k_{l,v}\beta_{l,v}\biggl) + \sum_{l=1}^{L}\biggr(\sum_{v=1}^{\mathcal{V_{l}}}(\mathcal{D}_{l}-k_{l,v})\ln(1 - \beta_{l,v})\biggr)\newline
+
+\end{aligned}
+$$
+
+The first summation in the ghastly expression represents the portion that
+would remain if we were to maximize with respect to $\mathbf{\pi}$ and that
+gives us an estimator for  $\pi_{l}$  as
+
+$$
+\begin{equation*}
+\hat{\pi_{l}} = \frac{\mathcal{D}_{l}}{\mathcal{D}}
+\end{equation*}
+$$
+
+In other words, the fraction of the examples of that particular language by the
+total number of examples. Similarily, the estimate of $\beta_{l,v}$ is
+
+$$
+\begin{equation*}
+\hat{\beta}_{l,v} = \frac{k_{l,v}}{\mathcal{D}_{l}}
+\end{equation*}
+$$
+
+
+##### Getting our hand dirty with data...
+
+#### A more detailed model
+
+An alternative approach is to imagine that each word has a specific probability
+of occurrence in the distribution. In this case, the engine draws from the pool
+of available words (with replacement) and constructs the feedback. It is
+reasonable to think that one way of figuring out this probability would be to
+assume that it was equal to the relative frequency of occurrence of that word
+in the training data. 
+
+
+##### Moar experiments
+
+
+### Finally...

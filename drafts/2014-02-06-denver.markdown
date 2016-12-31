@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Time, Space and Denver"
+date: 2014-02-06 09:14
+comments: true
+categories: 
+---
+
+A year of mountains; I didn't see this till the end. It made me happy. For mountains bring me back, back home to the [Entoto Mountains][entotm]. I never climbed them, never touched them. Yet there were there, always; a backdrop to every window. The last one was in Colorado or Costa Rica, I am not sure. Mount Tam, South India, the Eastern Himalayas, Lake Tahoe, the Flatirons and parts of Guanacaste. 
+
+
+This time around, I was exploring them. Unsurprisingly, this time warping was everywhere; a hundred years ago, Lord Ronaldshay, the Governor of Calcutta, made a similar trek. His [description][thunderbolt] of the wildlife of Sikkim and Bhutan was still fairly accurate. 
+
+
+His retinue was slightly different though; a few ponies, several peons and such. Mine involved lots of driving: a British convertible, Indian rundown Mahendra Maxes, forgotten American compacts. We both didn't travel long; I found out later that our trips were all thirty or maybe forty miles. At that time, some felt longer than others. America was faster, felt safe and boring. India was slow, the speedometer never crossed forty, kilometers that is. 
+
+
+
+Yet it was more thrilling. Ranaldshay dealt with jungles and tigers, I was on waterfalls that pretended to be roads. Also, India didn't believe in seatbelts. I put them on once while going to an army base. Dinesh had been driving me for the past three days. Another anonymous Mahendra Max driver. The drivers and I typically talked little; after three days of silence, Dinesh spoke: "Did I have my foreign papers ready?" I waved an Indian passport and we went on. The danger was not just in my head; a few days later, Dinesh spoke again. He mentioned the couple. Bengalis, plains people up for the Summer School holidays. They were a few Mahendra Maxes ahead on our slow crawl up the Himalayas. Apparently they stayed in one of the other tourist traps opposite me, I vaguely recalled them. Dinesh said their driver took 'tablet' and drove the car off the waterfall-road. They had two children, both girls orphaned, in a country not known prizing girls. At that time, it was shocking. In Costa Rica, I saw that the shock was me being American. Life, elsewhere is short; sometimes nasty, passionate though. Americans love their long long lives of casual, trivial interactions. 
+
+Yet, it was not all dark and amusing facts. For trips tell you more about your companions. The last of my trips, Colorado and Costa Rica, made me feel I did. Enough to feel they are friends. My kind of friends.
+
+{% flickr_set 72157640284240413 36 %}
+
+[entotm]: http://en.wikipedia.org/wiki/Mount_Entoto
+[thunderbolt]: http://www.amazon.com/gp/product/817769295X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=817769295X&linkCode=as2&tag=meditations02-20

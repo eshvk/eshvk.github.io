@@ -53,7 +53,7 @@
 /* Space between the date and the post */
 /* TODO Remove date */
 /* Weight of the line at the very top of the page */
-@media -sass-debug-info{filename{}line{font-family:\000034}}
+/* line 4 */
 body {
   margin: 0;
   padding: 0;
@@ -63,13 +63,13 @@ body {
   color: #333;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000313}}
+/* line 13 */
 em {
   font-style: normal;
   font-family: "sorts-mill-goudy-italic";
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000318}}
+/* line 18 */
 h2 {
   margin-top: 2em;
   font-size: 1.1em;
@@ -77,7 +77,7 @@ h2 {
   font-style: normal;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000325}}
+/* line 25 */
 .wrap {
   margin: 0 auto;
   width: 45%;
@@ -86,7 +86,7 @@ h2 {
    * affected and not internals 
    */
 }
-@media -sass-debug-info{filename{}line{font-family:\0000332}}
+/* line 32 */
 .wrap > footer {
   margin-top: 2em;
   padding: 2em 0;
@@ -96,74 +96,74 @@ h2 {
 }
 
 /* Index */
-@media -sass-debug-info{filename{}line{font-family:\0000342}}
+/* line 42 */
 .index {
   text-align: center;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000344}}
+/* line 44 */
 .index ul {
   list-style-type: none;
 }
 
 /* The main blog header */
-@media -sass-debug-info{filename{}line{font-family:\0000351}}
+/* line 51 */
 header {
   text-align: center;
   border-bottom: 1px solid #dfdfdf;
   /* // a */
 }
-@media -sass-debug-info{filename{}line{font-family:\0000353}}
+/* line 53 */
 header .title {
   font-family: "nevis";
   font-size: 2.3em;
   text-transform: uppercase;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000358}}
+/* line 58 */
 header .subtitle {
   font-family: "calluna-regular";
   font-size: 1.4em;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000363}}
+/* line 63 */
 header a {
   color: #333;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000366}}
+/* line 66 */
 header a:hover, header a:active {
   color: #258fb8;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000374}}
+/* line 74 */
 a {
   color: #258fb8;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000377}}
+/* line 77 */
 a:hover {
   color: #333;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000382}}
+/* line 82 */
 blockquote {
   font-family: "sorts-mill-goudy-italic";
   font-size: 1em;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000387}}
+/* line 87 */
 article {
   padding: 0;
   font-size: 1.1em;
   line-height: 1.7em;
   text-align: justify;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000392}}
+/* line 92 */
 article header {
   margin: 0 0 3em 0;
   padding: 0;
   border: 0px;
   text-align: center;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000397}}
+/* line 97 */
 article header h1 {
   font-size: 1.6em;
   font-weight: normal;

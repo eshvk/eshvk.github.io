@@ -48,7 +48,8 @@ PLUGINS = ['render_math', 'assets']
 ASSET_CONFIG =[('SASS_LOAD_PATHS', ['/Volumes/Spotify/Dropbox (Personal)/professional/WWW/pelican_related/temp/moleskine2/static/sass/'])]
 # This enables single quotes to be processed right. 
 TYPOGRIFY = True
-STATIC_PATHS = ['extras/favicon.png','javascripts', 'stylesheets']
+STATIC_PATHS = ['extras/favicon.png','javascripts', 'stylesheets', 'extras/CNAME']
 EXTRA_PATH_METADATA = {
-   'extras/favicon.png': {'path': 'favicon.png'}
+   'extras/favicon.png': {'path': 'favicon.png'},
+   'extras/CNAME': {'path': 'CNAME'}
 }

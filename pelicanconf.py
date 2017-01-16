@@ -16,7 +16,8 @@ DEFAULT_LANG = u'en'
 ARTICLE_ORDER_BY = 'article_order'
 # No need for menus for now
 DISPLAY_PAGES_ON_MENU = False
-
+# Nicer Pages Names
+PAGE_PATHS = ['creator']
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

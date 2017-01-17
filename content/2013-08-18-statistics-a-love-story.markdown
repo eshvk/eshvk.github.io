@@ -30,13 +30,11 @@ In [Bridget Jones's Diary][bjdiary], Bridget Jones weighs herself every day. She
 <div id="bridgetchart" style="text-align: center !important;">
 <div id="caption" class="hidden" ><p><span id="value">100</span></p></div>	
 </div>
-<!--
-	{% photo photo-center /images/r_scatter_subsampled.jpg 400 225 Bridget Jones : A year of pounds, emotions %}
--->
 
 It gets harder. You can never really know the mean or the variance either. All you are getting from your set of measurements is a sample, a sample from all the sets of measurements. Getting back to Bridget and her hundred weighings a day, imagine the space of all possible hundred weighings a day that could happen. All the variations. Every timeline giving you a mean, each mean a clue to the original mean of Bridget's weights. Yes, it is randomness all the way down. 
 
-My experimental value for $g$ was just a sample. The sample mean was an estimate for the true value of $g$. There are ways to prove that if I keep repeating those experiments; those awful experiments that I didn't like, I would get have a high probability of getting something closer. Not a guarantee. Just maybe. That is what Statistics gives you. A way of dealing with the mad, mad crazy world out there. I realize I am in love.  
+My experimental value for $g$ was just a sample. The sample mean was an estimate for the true value of $g$. There are ways to prove that if I keep repeating those experiments; those awful experiments that I didn't like, I would get have a high probability of getting something closer. Not a guarantee. Just maybe. That is what Statistics gives you. A way of dealing with the mad, mad crazy world out there. I realize I am in love._See [here][bjviz] for more detailed analysis of her weight._
 
 [ladytea]: http://www.amazon.com/gp/product/0805071342/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0805071342&linkCode=as2&tag=meditations02-20
 [bjdiary]: http://www.amazon.com/gp/product/0143117130/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0143117130&linkCode=as2&tag=meditations02-20
+[bjviz]: http://nbviewer.jupyter.org/github/eshvk/bridget_jones_diary/blob/master/Bridget%20Jones%20Diaries.ipynb

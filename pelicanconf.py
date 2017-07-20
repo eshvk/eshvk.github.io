@@ -44,7 +44,7 @@ PLUGINS = ['render_math', 'assets']
 # Sass is not able to resolve this as a relative path. There is a bug in either 
 # my understanding or sass. 
 # FIXME replace this with the theme dir name + static + sass
-ASSET_CONFIG =[('SASS_LOAD_PATHS', ['/Volumes/Spotify/Dropbox (Personal)/professional/WWW/pelican_related/temp/moleskine2/static/sass/'])]
+ASSET_CONFIG =[('SASS_LOAD_PATHS', ['/Users/eshvk/workspace/pelican_related/temp/moleskine2/static/sass/'])]
 # This enables single quotes to be processed right. 
 TYPOGRIFY = True
 STATIC_PATHS = ['extras/favicon.png','javascripts', 'stylesheets', 'extras/CNAME']

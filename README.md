@@ -24,3 +24,8 @@ Pelican Plugins are symbollically linked to `../../pelican_related/pelican-plugi
 
 ```
 ```
+## On Themes
+
+I had to install sass to compile up themes.
+```gem install sass
+``` 

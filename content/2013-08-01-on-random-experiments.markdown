@@ -6,11 +6,12 @@ comments: false
 categories: 
 article_order: 3
 ---
-In [Ham on Rye][hrb], Bukowski talks about his acne. A teenager with acne has a
+{% newthought In [Ham on Rye][hrb]%}, Bukowski talks about his acne. A teenager with acne has a
 terrible fate. This was depression era America. Bukowski was poor. He went to a
 hospital, I imagine one for poor people. The doctors suggested the electric
 needle. A hot needle was used to drill his boils, squeeze them. This was done
-for weeks. It was useless. He was left scarred.  
+for weeks. It was useless. He was left scarred.
+
 
 > They experimented on the poor and if that worked they used the treatment on
 > the rich. And if it didn't work, there would still be more poor left over to

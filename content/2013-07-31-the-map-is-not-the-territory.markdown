@@ -7,7 +7,7 @@ published: true
 categories: 
 article_order: 1
 ---
-Alfred Korzybski said that. Reality is not the model. The model however can
+{% newthought Alfred Korzybski said that. %} Reality is not the model. The model however can
 change. It can be changed. I realized that very recently. It is a powerful
 idea. It directs responsibility inwards, completely. I am responsible for my
 emotions, my reactions to the external world.   

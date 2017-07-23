@@ -36,11 +36,11 @@ AUTHOR_FEED_RSS = None
 # DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 # Stuff added by me. assets is for webassets.
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['render_math', 'assets']
+PLUGINS = ['render_math', 'assets', 'liquid_tags.tufte', 'liquid_tags.video']
 # Sass is not able to resolve this as a relative path. There is a bug in either 
 # my understanding or sass. 
 # FIXME replace this with the theme dir name + static + sass

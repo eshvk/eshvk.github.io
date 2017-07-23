@@ -13,14 +13,9 @@ That was physics for me. It was mainly the experiments, we read these big, impor
 
 It also was an academic problem. Mainly because of her. I still remember her. She was obese, violent with a temper -- the physics lab teacher. She would pick up my lab notebook, circle a few numbers with that angry red pen. She would always fling the notebook on the floor. Sometimes, she would call me a "duffer"; she would point at the "good kids". They got the right values. She might even cuff me on the head. Then, I would have to go repeat those experiments, the "bad ones". 
 
-I rarely repeated the experiments. After a while, I rarely even did them the first time around. I made up numbers. Numbers such that the mean was close to the "true value". We were both wrong. I believed in a magical world where amazing tools existed to get perfect results. She believed that some results were bad and could be thrown away. We both believed that not getting a correct value for $g$ was a bad thing. It is okay, though. We were repeating a cycle. A cycle of mistakes that smarter people had made, for centuries, far away from that cargo-cult physics class in a high school in India. 
+I rarely repeated the experiments. After a while, I rarely even did them the first time around. I made up numbers. Numbers such that the mean was close to the "true value". We were both wrong. I believed in a magical world where amazing tools existed to get perfect results. She believed that some results were bad and could be thrown away. We both believed that not getting a correct value for $g$ was a bad thing. It is okay, though. We were repeating a cycle. A cycle of mistakes that smarter people had made, for centuries, far away from that cargo-cult physics class in a high school in India.
 
-Until today, I didn't realize that awful feeling had left me. Left me long ago. I am reading a very odd book<label for="sn-ladytea"
-       class="margin-toggle sidenote-number">
-</label>
-<input type="checkbox"
-       id="sn-ladytea"
-       class="margin-toggle"/><span class="sidenote">[The Lady Tasting Tea][ladytea]</span>, one that explains statistics for the layman; yet it addresses deep philosophical issues about the nature of science. Things that trigger the old memory. 
+Until today, I didn't realize that awful feeling had left me. Left me long ago. I am reading a very odd book{% sidenote sn-lady-tea "[The Lady Tasting Tea][ladytea]" %}, one that explains statistics for the layman; yet it addresses deep philosophical issues about the nature of science. Things that trigger the old memory. 
 
 > ... all experiments are sloppy and that very seldom does even the most careful scientist get their number right. 
 

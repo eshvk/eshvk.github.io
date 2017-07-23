@@ -39,3 +39,8 @@ Use
 ```
 {% newthought blah blah %} for new thoughts.
 ```
+
+Use 
+```
+{% sidenote sidenote-id "blah blah" %} for sidenotes.
+```

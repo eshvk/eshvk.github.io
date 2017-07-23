@@ -40,7 +40,7 @@ RELATIVE_URLS = True
 
 # Stuff added by me. assets is for webassets.
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['render_math', 'assets', 'liquid_tags.tufte', 'liquid_tags.video']
+PLUGINS = ['render_math', 'assets', 'liquid_tags.tufte']
 # Sass is not able to resolve this as a relative path. There is a bug in either 
 # my understanding or sass. 
 # FIXME replace this with the theme dir name + static + sass

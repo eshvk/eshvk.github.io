@@ -33,7 +33,7 @@ I had to install sass to compile up themes.
 ```gem install sass
 ``` 
 
-## On Liquid Tags
+### On Liquid Tags
 
 Use 
 ```
@@ -43,4 +43,9 @@ Use
 Use 
 ```
 {% sidenote sidenote-id "blah blah" %} for sidenotes.
+```
+
+Use 
+```
+{% marginnote marginnote-id "blah blah" %} for marginnotes (so no identifier).
 ```

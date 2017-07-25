@@ -1,3 +1,7 @@
+# Status : 
+- Re-edit three blogs to make them more tuftian. 
+- Publish Tufte based blogs. 
+- TODO: Add full width image, main column image and margin image to the plugin.
 # Maintenance Notes
 
 - Load up environment installed via conda called `pelican` by doing

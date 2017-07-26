@@ -1,7 +1,7 @@
 # Status : 
 - Re-edit three blogs to make them more tuftian. 
 - Publish Tufte based blogs. 
-- TODO: Add full width image, main column image and margin image to the plugin.
+
 # Maintenance Notes
 
 - Load up environment installed via conda called `pelican` by doing
@@ -52,4 +52,18 @@ Use
 Use 
 ```
 {% marginnote marginnote-id "blah blah" %} for marginnotes (so no identifier).
+```
+
+Use
+```
+{% fullwidth [http[s]:/]/path/to/image [caption text | "caption text"] %} for fullwidth images
+```
+
+Use
+```
+{% maincolumn [http[s]:/]/path/to/image [caption text | "caption text"] %} for maincolumn images
+```
+Use
+```
+{% marginfigure marginfigureid [http[s]:/]/path/to/image [caption text | "caption text"] %} for marginfigure images
 ```

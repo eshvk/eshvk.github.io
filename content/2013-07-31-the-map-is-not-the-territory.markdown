@@ -19,7 +19,7 @@ a 'creativity machine'. Each such interaction is different. This makes sense to
 me. My neuroscience professor talked about this in visual perception. The data
 stream fed into the eyes is mostly stripped. Some hints go to the brain. It
 reconstructs it. It is an amazing idea. We all have a collaborative social
-agreement on symbols to describe 'red'. However, do we all perceive <span style="color: red;">red</span> the same way?   
+agreement on symbols to describe 'red'. However, do we all perceive <span style="color: red;">red</span> the same way?
 
 Some models are more powerful, I feel. Prose is more effective at bringing
 magical worlds across time and space. Movies, not so much.  
@@ -51,7 +51,7 @@ on several different levels? Statistics is incredibly rich. A Gaussian
 probability model underpins so many different narratives: Bayesian,
 frequentist, even probability theory. These are not immediately apparent,
 however. The symbols, even some of the drawings are limited. _Ceci n'est pas une
-pipe_; [indeed][rmagritte]. 
+pipe_; [indeed][rmagritte].
 
 I was lucky. I found someone who stripped away symbols, shared with me their 
 way of perceiving math. There needs to be a more systematic way of doing

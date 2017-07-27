@@ -1,10 +1,63 @@
 $font-path: "../font/";
 
-@include font-face('sorts-mill-goudy', '#{$font-path}GoudyStM-webfont');
-@include font-face('sorts-mill-goudy-italic', '#{$font-path}GoudyStM-Italic-webfont');
-@include font-face('museo-sans', '#{$font-path}MuseoSans');
-@include font-face('sofia-pro-light', '#{$font-path}SofiaProLight-webfont');
-@include font-face('bookletter', '#{$font-path}goudy_bookletter_1911-webfont');
-@include font-face('governor', '#{$font-path}governor-webfont');
+/* 
+Conversion from tufte-css to scss via http://sebastianpontow.de/css2compass/
+*/
+
+//fonts
+$et_book: et-book;
+$et_book_roman_old_style: et-book-roman-old-style;
+
+//urls
+$url_0: url(#{$font-path}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot);
+$url_1: url(#{$font-path}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix);
+$url_2: url(#{$font-path}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff);
+$url_3: url(#{$font-path}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf);
+$url_4: url(#{$font-path}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf);
+$url_5: url(#{$font-path}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot);
+$url_6: url(#{$font-path}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix);
+$url_7: url(#{$font-path}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff);
+$url_8: url(#{$font-path}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf);
+$url_9: url(#{$font-path}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf);
+$url_10: url(#{$font-path}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot);
+$url_11: url(#{$font-path}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix);
+$url_12: url(#{$font-path}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff);
+$url_13: url(#{$font-path}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf);
+$url_14: url(#{$font-path}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf);
+$url_15: url(#{$font-path}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot);
+$url_16: url(#{$font-path}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix);
+$url_17: url(#{$font-path}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff);
+$url_18: url(#{$font-path}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf);
+$url_19: url(#{$font-path}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf);
+
+@font-face {
+	font-family: $et_book;
+	src: $url_0;
+	src: $url_1 format("embedded-opentype"), $url_2 format("woff"), $url_3 format("truetype"), $url_4 format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: $et_book;
+	src: $url_5;
+	src: $url_6 format("embedded-opentype"), $url_7 format("woff"), $url_8 format("truetype"), $url_9 format("svg");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: $et_book;
+	src: $url_10;
+	src: $url_11 format("embedded-opentype"), $url_12 format("woff"), $url_13 format("truetype"), $url_14 format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: $et_book_roman_old_style;
+	src: $url_15;
+	src: $url_16 format("embedded-opentype"), $url_17 format("woff"), $url_18 format("truetype"), $url_19 format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+/* Title and subtitle fonts */
 @include font-face('nevis', '#{$font-path}nevis-webfont');
 @include font-face('calluna-regular', '#{$font-path}Calluna-Regular-webfont');

@@ -27,7 +27,7 @@ In [Bridget Jones's Diary][bjdiary], Bridget Jones weighs herself every day. She
 <link rel="stylesheet" type="text/css" href="/stylesheets/bridget.css"> 
 
 <script src="/javascripts/bridgetjones/bridget.js" charset="utf-8"></script>
-<div id="bridgetchart" style="text-align: center !important;">
+<div id="bridgetchart">
 <div id="caption" class="hidden" ><p><span id="value">100</span></p></div>	
 </div>
 

@@ -24,10 +24,12 @@ pip install ghp-import
 pelican content -s pelicanconf.py -t ../pelican_related/moleskine2
 ```
 
-- Publishing
+- Publishing : User pages are published to master.
 ```
 pelican content -s publishconf.py -t ../pelican_related/tufteskine
+ghp-import -p output -b master
 ```
+
 
 
 ## On Pelican Plugins

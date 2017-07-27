@@ -32,7 +32,7 @@ was however right.
 
 Sometimes, conjecture is all we have. How do we reduce the number that die
 then? It is hard. There is an art to it. An art of making numerical
-conjectures. Statistics. According to [Freedman][frstat], anyway.  
+conjectures: Statistics{% marginnote freedman According to [Freedman][frstat], anyway. %}.
 
 Say I have a bag of marbles. They are identical. Blue, round, made in the same
 sweatshop. I sell them in a shop. An angry customer comes by. She was in a

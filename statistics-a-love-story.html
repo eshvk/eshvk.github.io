@@ -3,8 +3,8 @@
 <head>
           <title>Meditations</title>
         <!-- favicon support; insert your favicon in the folder images -->
-        <link href="http://eshvk.me/favicon.png" rel="shortcut icon"> 
-            <link rel="stylesheet" href="http://eshvk.me/theme/css/main.css?913fe0bb"> 
+        <link href="./favicon.png" rel="shortcut icon"> 
+            <link rel="stylesheet" href="./theme/css/main.css?6882eb11"> 
  
 
 
@@ -12,22 +12,29 @@
 </head>
 
 <body id="index" class="home">
-    <div class="wrap">
-        <header><div class="title"><a href="http://eshvk.me/">Meditations</a></div>
-<div class="subtitle">on Math, Art and Prose.</div></header>
+<!--     <div class="wrap">
+Moved the header tag out of here and put it just in the index.
+ -->      
 <article>
-<section id="content" class="body">
-  <header>
-    <h1 class="entry-title">
-      <a href="http://eshvk.me/statistics-a-love-story.html" rel="bookmark"
-         title="Permalink to Statistics: A love story">Statistics: A love&nbsp;story</a></h1>
+<!-- <section id="content" class="body">
+ -->  <header>
+    <!-- This will be Article title -->
+    <h1>
+<!--       <a href="./statistics-a-love-story.html" rel="bookmark"
+         title="Permalink to Statistics: A love story">
+  </a> -->
+         Statistics: A love&nbsp;story      
+    </h1>
   </header>
   <div class="entry-content">
     <p>Remember that feeling? That feeling you get when you have something stuck between your teeth. You claw at it; you use a toothpick which breaks. Useless efforts. Annoying. You hope it goes away. It does eventually; the world feels right again. You don&#8217;t even notice the moment it disappeared. Yet, those minutes, hours were&nbsp;awful.    </p>
 <p>That was physics for me. It was mainly the experiments, we read these big, important books about fancy theories. We then spent a few hours every week running experiments. Experiments measuring gravity or some other bullshit. The big books said that free fall acceleration, gravity (<span class="math">\(g\)</span>) was <span class="math">\(9.8\)</span> <span class="math">\(m/s^2\)</span>. That wasn&#8217;t the case in those experiments. I thought it was because of the way we did things. You were given shitty equipment. You repeated each experiment ten times, you wrote down the numbers, you found the average. You hoped the value was close to the book value. It never was; that worried&nbsp;me.   </p>
 <p>It also was an academic problem. Mainly because of her. I still remember her. She was obese, violent with a temper &#8212; the physics lab teacher. She would pick up my lab notebook, circle a few numbers with that angry red pen. She would always fling the notebook on the floor. Sometimes, she would call me a &#8220;duffer&#8221;; she would point at the &#8220;good kids&#8221;. They got the right values. She might even cuff me on the head. Then, I would have to go repeat those experiments, the &#8220;bad&nbsp;ones&#8221;. </p>
-<p>I rarely repeated the experiments. After a while, I rarely even did them the first time around. I made up numbers. Numbers such that the mean was close to the &#8220;true value&#8221;. We were both wrong. I believed in a magical world where amazing tools existed to get perfect results. She believed that some results were bad and could be thrown away. We both believed that not getting a correct value for <span class="math">\(g\)</span> was a bad thing. It is okay, though. We were repeating a cycle. A cycle of mistakes that smarter people had made, for centuries, far away from that cargo-cult physics class in a high school in&nbsp;India. </p>
-<p>Until today, I didn&#8217;t realize that awful feeling had left me. Left me long ago. I am reading a very odd book. <a href="http://www.amazon.com/gp/product/0805071342/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0805071342&amp;linkCode=as2&amp;tag=meditations02-20">The Lady Tasting Tea</a> explains statistics for the layman; yet it addresses deep philosophical issues about the nature of science. Things that trigger the old&nbsp;memory. </p>
+<p>I rarely repeated the experiments. After a while, I rarely even did them the first time around. I made up numbers. Numbers such that the mean was close to the &#8220;true value&#8221;. We were both wrong. I believed in a magical world where amazing tools existed to get perfect results. She believed that some results were bad and could be thrown away. We both believed that not getting a correct value for <span class="math">\(g\)</span> was a bad thing. It is okay, though. We were repeating a cycle. A cycle of mistakes that smarter people had made, for centuries, far away from that cargo-cult physics class in a high school in&nbsp;India.</p>
+<p>Until today, I didn&#8217;t realize that awful feeling had left me. Left me long ago. I am reading a very odd book<label for="sn-lady-tea"
+        class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="sn-lady-tea" class="margin-toggle"/>
+        <span class="sidenote"><a href="http://www.amazon.com/gp/product/0805071342/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0805071342&amp;linkCode=as2&amp;tag=meditations02-20">The Lady Tasting Tea</a></span>, one that explains statistics for the layman; yet it addresses deep philosophical issues about the nature of science. Things that trigger the old&nbsp;memory. </p>
 <blockquote>
 <p>&#8230; all experiments are sloppy and that very seldom does even the most careful scientist get their number&nbsp;right. </p>
 <p>&#8230; we do not look upon experimental results as carefully measured numbers in their own right. Instead, they are examples of a scatter of numbers, a distribution of numbers can be written as a mathematical formula that tells us an observed number will be a given&nbsp;value.  </p>
@@ -42,12 +49,8 @@
 <div id="caption" class="hidden" ><p><span id="value">100</span></p></div>  
 </div>
 
-<!--
-    {% photo photo-center /images/r_scatter_subsampled.jpg 400 225 Bridget Jones : A year of pounds, emotions %}
--->
-
 <p>It gets harder. You can never really know the mean or the variance either. All you are getting from your set of measurements is a sample, a sample from all the sets of measurements. Getting back to Bridget and her hundred weighings a day, imagine the space of all possible hundred weighings a day that could happen. All the variations. Every timeline giving you a mean, each mean a clue to the original mean of Bridget&#8217;s weights. Yes, it is randomness all the way&nbsp;down. </p>
-<p>My experimental value for <span class="math">\(g\)</span> was just a sample. The sample mean was an estimate for the true value of <span class="math">\(g\)</span>. There are ways to prove that if I keep repeating those experiments; those awful experiments that I didn&#8217;t like, I would get have a high probability of getting something closer. Not a guarantee. Just maybe. That is what Statistics gives you. A way of dealing with the mad, mad crazy world out there. I realize I am in&nbsp;love.  </p>
+<p>My experimental value for <span class="math">\(g\)</span> was just a sample. The sample mean was an estimate for the true value of <span class="math">\(g\)</span>. There are ways to prove that if I keep repeating those experiments; those awful experiments that I didn&#8217;t like, I would get have a high probability of getting something closer. Not a guarantee. Just maybe. That is what Statistics gives you. A way of dealing with the mad, mad crazy world out there. I realize I am in love. <em>See <a href="http://nbviewer.jupyter.org/github/eshvk/bridget_jones_diary/blob/master/Bridget%20Jones%20Diaries.ipynb">here</a> for more a detailed analysis of her&nbsp;weight.</em></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -60,11 +63,9 @@
     }
 
     var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
@@ -106,10 +107,12 @@
 }
 </script>
   </div><!-- /.entry-content -->
-</section>
+<!-- </section> -->
 </article>
+    <!-- Now only footer should be aligned centered -->    
+    <div class="wrap">
         <footer id="contentinfo" class="body">
-            Crafted by <a href="http://eshvk.me/pages/esh"
+            Crafted by <a href="./pages/esh"
          title="Esh">Esh</a>
         </footer>
     </div>

@@ -4,14 +4,14 @@ from __future__ import unicode_literals
 AUTHOR = u'Esh'
 SITENAME = u'Meditations'
 SITESUBTITLE = u'on Math, Art and Prose.'
-SITEURL = 'http://eshvk.me'
+SITEURL = 'https://eshvk.me'
 
 PATH = 'content'
 
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
-# This is a global ordering number. It may have to be combined with category 
+# This is a global ordering number. It may have to be combined with category
 # once we have individual pages.
 ARTICLE_ORDER_BY = 'article_order'
 # No need for menus for now
@@ -41,11 +41,11 @@ RELATIVE_URLS = True
 # Stuff added by me. assets is for webassets.
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['render_math', 'assets', 'liquid_tags.tufte']
-# Sass is not able to resolve this as a relative path. There is a bug in either 
-# my understanding or sass. 
+# Sass is not able to resolve this as a relative path. There is a bug in either
+# my understanding or sass.
 # FIXME replace this with the theme dir name + static + sass
 ASSET_CONFIG =[('SASS_LOAD_PATHS', ['/Users/eshvk/workspace/pelican_related/temp/moleskine2/static/sass/'])]
-# This enables single quotes to be processed right. 
+# This enables single quotes to be processed right.
 TYPOGRIFY = True
 STATIC_PATHS = ['extras/favicon.png','javascripts', 'stylesheets', 'extras/CNAME']
 EXTRA_PATH_METADATA = {

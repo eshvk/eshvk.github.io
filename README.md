@@ -1,6 +1,6 @@
-# Status : 
-- Re-edit three blogs to make them more tuftian. 
-- Publish Tufte based blogs. 
+# Status :
+- Re-edit three blogs to make them more tuftian.
+- Publish Tufte based blogs.
 
 # Maintenance Notes
 
@@ -39,26 +39,27 @@ Pelican Plugins are symbollically linked to `../../pelican_related/pelican-plugi
 pip install webassets
 ```
 
-Note that this is a fork of the original pelican plugins. 
+Note that this is a fork of the original pelican plugins.
 ## On Themes
 
 I had to install sass to compile up themes.
-```gem install sass
-``` 
+```~~gem install sass~~
+brew install sass/sass/sass
+```
 
 ### On Liquid Tags
 
-Use 
+Use
 ```
 {% newthought blah blah %} for new thoughts.
 ```
 
-Use 
+Use
 ```
 {% sidenote sidenote-id "blah blah" %} for sidenotes.
 ```
 
-Use 
+Use
 ```
 {% marginnote marginnote-id "blah blah" %} for marginnotes (so no identifier).
 ```

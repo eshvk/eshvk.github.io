@@ -39,12 +39,14 @@ AUTHOR_FEED_RSS = None
 RELATIVE_URLS = True
 
 # Stuff added by me. assets is for webassets.
-PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['render_math', 'assets', 'liquid_tags.tufte']
+# PLUGIN_PATHS = ['./plugins']
+# PLUGINS = ['render_math', 'assets', 'liquid_tags.tufte']
 # Sass is not able to resolve this as a relative path. There is a bug in either
 # my understanding or sass.
 # FIXME replace this with the theme dir name + static + sass
-ASSET_CONFIG =[('SASS_LOAD_PATHS', ['/Users/eshvk/workspace/pelican_related/temp/moleskine2/static/sass/'])]
+#ASSET_CONFIG =[('SASS_LOAD_PATHS', ['/Users/esh/workspace/pelican_related/temp/moleskine2/static/sass/'])]
+WEBASSETS_CONFIG =[('SASS_LOAD_PATHS', ['/Users/esh/workspace/pelican_related/moleskine2/static/sass/'])]
+LIQUID_TAGS = ["tufte"] #Enables the use of special code
 # This enables single quotes to be processed right.
 TYPOGRIFY = True
 STATIC_PATHS = ['extras/favicon.png','javascripts', 'stylesheets', 'extras/CNAME']

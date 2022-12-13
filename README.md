@@ -7,10 +7,12 @@
 - Load up environment installed via conda called `pelican` by doing
 
 ```
-source activate pelican
+conda activate pelican
 ```
 
-This environment has pelican installed via [here](http://docs.getpelican.com/en/stable/install.html) with the following plugins:
+This code and environment was tested for Pelican 4.8.0.
+
+The conda environment has pelican installed via [here](http://docs.getpelican.com/en/stable/install.html) with the following plugins:
 ```
 pip install pelican
 pip install typogrify
@@ -21,7 +23,11 @@ pip install ghp-import
 
 - Currently loading up pelican involves the following:
 ```
-pelican content -s pelicanconf.py -t ../pelican_related/moleskine2
+pelican content -s pelicanconf.py -t ../pelican_related/tufteskine
+```
+
+```
+pelican --autoreload --listen
 ```
 
 - Publishing : User pages are published to master.
@@ -33,21 +39,20 @@ ghp-import -p output -b master
 
 
 ## On Pelican Plugins
-Pelican Plugins are symbollically linked to `../../pelican_related/pelican-plugins/`. This contains all the plugins from [here](https://github.com/getpelican/pelican-plugins/). Currently the only two plugins installed are [assets](https://github.com/getpelican/pelican-plugins/tree/master/assets) and render_math. The former requires
+The current modern approach to Pelican plugins appears to be to install them via pip. I have:
+```
+pip install pelican-webassets pelican-render-math
+```
+
+`pelican-webassets` requires the `webassets` module.
 
 ```
 pip install webassets
 ```
 
-Note that this is a fork of the original pelican plugins.
-## On Themes
+### Liquid Tags via `pelican-liquid-tags`
 
-I had to install sass to compile up themes.
-```~~gem install sass~~
-brew install sass/sass/sass
-```
-
-### On Liquid Tags
+- Install the fork of `pelican-liquid-tags` from [here](https://github.com/eshvk/liquid-tags/) to get the following tags.
 
 Use
 ```
@@ -77,3 +82,14 @@ Use
 ```
 {% marginfigure marginfigureid [http[s]:/]/path/to/image [caption text | "caption text"] %} for marginfigure images
 ```
+
+## On Pelican Themes
+
+I had to install sass to compile up themes.
+```
+brew install sass/sass/sass
+```
+
+### Current Themes
+- Uses [tufteskine](https://github.com/eshvk/tufteskine).
+

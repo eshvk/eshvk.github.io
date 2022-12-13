@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "https://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
-<svg xmlns="https://www.w3.org/2000/svg">
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
 <metadata></metadata>
 <defs>
 <font id="CallunaRegular" horiz-adv-x="942" >
@@ -240,4 +240,4 @@
 <glyph unicode="&#x2122;" horiz-adv-x="1460" d="M55 1212l27 158q33 -4 70 -4h374l70 4l-25 -158h-43q0 59 -21 81t-69 22h-59v-408l-4 -45l82 -8l-2 -37l-246 -4v41q27 1 42 16t15 37v408h-51q-39 0 -63.5 -21.5t-51.5 -81.5h-45zM625 813v41q26 1 41.5 15t17.5 36l16 365q1 21 -3 30.5t-17.5 16.5t-46.5 14v35h72 l155 4q1 -2 29 -80l88 -254l12 -47l121 320l20 57h25l150 4l4 -4q-3 -4 -7.5 -11.5t-11.5 -34.5t-6 -58l16 -361l-2 -41l74 -6l-6 -37l-236 -4v41q28 1 43 14t15 33l-14 404l-185 -490l-51 8l-174 471l-16 -389l-5 -45l76 -6l-4 -37z" />
 <glyph unicode="&#xe000;" horiz-adv-x="931" d="M0 0v932h932v-932h-932z" />
 </font>
-</defs></svg>
+</defs></svg> 

@@ -1,3 +1,6 @@
+/* 
+Conversion from tufte-css to scss via http://sebastianpontow.de/css2compass/
+*/
 @font-face {
   font-family: et-book;
   src: url(../font//et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot);
@@ -410,51 +413,41 @@ label.margin-toggle:not(.sidenote-number) {
     padding-left: 8%;
     padding-right: 8%;
   }
-
   p,
-footer {
+  footer {
     width: 100%;
   }
-
   pre.code {
     width: 97%;
   }
-
   ul {
     width: 85%;
   }
-
   figure {
     max-width: 90%;
   }
-
   figcaption,
-figure.fullwidth figcaption {
+  figure.fullwidth figcaption {
     margin-right: 0%;
     max-width: none;
   }
-
   blockquote {
     margin-left: 1.5em;
     margin-right: 0em;
   }
-
   blockquote p,
-blockquote footer {
+  blockquote footer {
     width: 100%;
   }
-
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
   }
-
   .sidenote,
-.marginnote {
+  .marginnote {
     display: none;
   }
-
   .margin-toggle:checked + .sidenote,
-.margin-toggle:checked + .marginnote {
+  .margin-toggle:checked + .marginnote {
     display: block;
     float: left;
     left: 1rem;
@@ -464,16 +457,13 @@ blockquote footer {
     vertical-align: baseline;
     position: relative;
   }
-
   label {
     cursor: pointer;
   }
-
   div.table-wrapper,
-table {
+  table {
     width: 85%;
   }
-
   img {
     width: 100%;
   }
